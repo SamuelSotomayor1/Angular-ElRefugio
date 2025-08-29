@@ -1,1 +1,26 @@
-<p>navbar works!</p>
+<body class="bg-gray-900 min-h-screen m-0">
+  <nav class="bg-black text-white w-full h-32 px-6 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="h-44 flex items-center justify-center">
+        <img src="assets/logo/ElRefugioLogo.png" alt="Logo" class="max-h-full max-w-full object-contain"/>
+    </div>
+    <!-- Menu desktop -->
+    <ul class="hidden md:flex space-x-16 text-lg font-medium">
+      <li><a href="#" class="hover:text-yellow-400 transition-colors text-4xl">Menu</a></li>
+      <li><a href="#" class="hover:text-yellow-400 transition-colors text-4xl">Reservas</a></li>
+      <li><a href="#" class="hover:text-yellow-400 transition-colors text-4xl">Nosotros</a></li>
+    </ul>
+    <!-- Mobile menu button -->
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+  <!-- Mobile menu -->
+  <div id="menu" class="hidden bg-black text-white px-6 py-4 space-y-4 md:hidden">
+    <a href="#" class="block text-lg font-medium hover:text-yellow-400 transition-colors">Menu</a>
+    <a href="#" class="block text-lg font-medium hover:text-yellow-400 transition-colors">Reservas</a>
+    <a href="#" class="block text-lg font-medium hover:text-yellow-400 transition-colors">Nosotros</a>
+  </div>
+</body>
