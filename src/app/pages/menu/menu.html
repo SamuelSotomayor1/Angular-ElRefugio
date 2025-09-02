@@ -1,1 +1,111 @@
-<p>menu works!</p>
+<app-navbar></app-navbar>
+<div class="py-24 bg-white">
+  <div class="max-w-full mx-auto px-4 md:px-6 lg:px-10">
+
+    <!-- Título -->
+    <div class="text-center mb-20">
+      <div class="w-24 h-px bg-black mx-auto mb-8"></div>
+      <h2 class="font-serif text-5xl md:text-6xl font-bold mb-6 tracking-wide text-black">
+        NUESTRO MENU
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Un recorrido exquisito de sabores, donde cada plato combina tradición e innovación para crear una experiencia inolvidable.
+      </p>
+      <div class="w-24 h-px bg-black mx-auto mt-8"></div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+      <div class="group">
+        <div class="relative overflow-hidden mb-6 bg-gray-100 rounded-lg">
+          <!-- Imagen más cuadrada -->
+          <img
+            src="assets/menu/arroz-con-pollo-plato.jpg"
+            alt="ArrozconPollo"
+            class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 aspect-square"
+          />
+          <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-500"></div>
+        </div>
+        <div class="text-center">
+          <h3 class="font-serif text-2xl font-bold mb-3 tracking-wide">FILET MIGNON</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 px-2">
+            Prime cut with truffle reduction and roasted vegetables.
+          </p>
+          <div class="w-12 h-px bg-black mx-auto mb-4"></div>
+          <p class="font-medium text-xl tracking-wider">$48</p>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="relative overflow-hidden mb-6 bg-gray-100 rounded-lg">
+          <img
+            src="https://images.unsplash.com/photo-1551183053-bf91a1d81141"
+            alt="Lobster Thermidor"
+            class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 aspect-square"
+          />
+          <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-500"></div>
+        </div>
+        <div class="text-center">
+          <h3 class="font-serif text-2xl font-bold mb-3 tracking-wide">LOBSTER</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 px-2">
+            Fresh Atlantic lobster with creamy cognac sauce.
+          </p>
+          <div class="w-12 h-px bg-black mx-auto mb-4"></div>
+          <p class="font-medium text-xl tracking-wider">$65</p>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="relative overflow-hidden mb-6 bg-gray-100 rounded-lg">
+          <img
+            src="https://images.unsplash.com/photo-1553621042-f6e147245754"
+            alt="Duck Confit"
+            class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 aspect-square"
+          />
+          <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-500"></div>
+        </div>
+        <div class="text-center">
+          <h3 class="font-serif text-2xl font-bold mb-3 tracking-wide">DUCK CONFIT</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 px-2">
+            Slow-cooked duck leg with cherry gastrique.
+          </p>
+          <div class="w-12 h-px bg-black mx-auto mb-4"></div>
+          <p class="font-medium text-xl tracking-wider">$42</p>
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="relative overflow-hidden mb-6 bg-gray-100 rounded-lg">
+          <img
+            src="assets/menu/filete-parrilla-plato.jpg"
+            alt="Sea Bass"
+            class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 aspect-square"
+          />
+          <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-500"></div>
+        </div>
+        <div class="text-center">
+          <h3 class="font-serif text-2xl font-bold mb-3 tracking-wide">SEA BASS</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-4 px-2">
+            Pan-seared with lemon beurre blanc and asparagus.
+          </p>
+          <div class="w-12 h-px bg-black mx-auto mb-4"></div>
+          <p class="font-medium text-xl tracking-wider">$38</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Botón -->
+    <div class="text-center mt-20">
+      <div class="w-24 h-px bg-black mx-auto mb-8"></div>
+      <button
+        class="bg-black text-white hover:bg-gray-800 transition-all duration-300 px-12 py-6 text-lg font-medium tracking-wider border border-gray-300"
+      >
+        RESERVAR MESA
+      </button>
+    </div>
+
+  </div>
+</div>
+<app-footer></app-footer>
