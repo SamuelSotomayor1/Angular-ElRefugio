@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 export class Navbar {
     items = [
     {
-      name: "Menu",
+      name: "Menú",
       path: "/menu"
     },
     {

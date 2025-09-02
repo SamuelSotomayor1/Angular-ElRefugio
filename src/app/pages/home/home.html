@@ -1,20 +1,19 @@
-<app-navbar></app-navbar>
-<div class="min-h-screen w-full bg-gradient-to-t from-gray-700 via-gray-900 to-black flex items-center">
+<div class="min-h-screen w-full bg-black">
   <!-- Grid -->
   <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 w-full pt-8"> <!-- pt reducido -->
     <div class="grid lg:grid-cols-7 lg:gap-x-20 xl:gap-x-28 2xl:gap-x-36 lg:items-center">
       
       <!-- Texto -->
       <div class="lg:col-span-3 lg:ml-auto text-left"> <!-- texto más a la derecha -->
-        <h1 class="font-serif block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-100 leading-tight">
-          Sabores que te hacen sentir en casa
+        <h1 class="font-serif block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-100 leading-tight pb-8">
+          El sabor de lo auténtico
         </h1>
         <p class="font-serif mt-3 text-lg sm:text-xl md:text-2xl text-gray-300">
-          Descubre un lugar donde la gastronomía se encuentra con la comodidad y la elegancia. Reserva tu mesa y vive la experiencia
+          Descubre un lugar donde la gastronomía se encuentra con la comodidad y la elegancia.
         </p>
 
-        <div class="mt-5 lg:mt-8 flex justify-start"> <!-- botón más a la izquierda -->
-          <a class="font-serif py-4 px-6 text-lg sm:text-xl md:text-2xl font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+        <div routerLink="/reservas" class="mt-5 lg:mt-8 flex justify-center"> <!-- botón más a la izquierda -->
+          <a class="font-serif py-4 px-6 text-lg sm:text-xl md:text-2xl font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" >
             Reservar
           </a>
         </div>
@@ -31,4 +30,3 @@
   </div>
   <!-- End Grid -->
 </div>
-<app-footer></app-footer>
