@@ -2,22 +2,25 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-
+export interface Reservation {
+  rut: string;
+  firstName: string;
+  lastName: string;
+  phone: string;
+  date: string;   // ISO string
+  time: string;   // "HH:mm"
+  tableId: number;
+}
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ReservationService {
-  private apiUrl = 'http://localhost:3000/api/reservation'; 
+  private apiUrl = 'http://localhost:3000/api/reservation';
 
   constructor(private http: HttpClient) {}
 
-  createReservation(data: any): Observable<any> {
-    return this.http.post(this.apiUrl, data);
+  createReservation(data: Reservation): Observable<any> {
+    return this.http.post<any>(this.apiUrl, data);
   }
-
-  getReservations(): Observable<any> {
-    return this.http.get(this.apiUrl);
-  }
-
 }
