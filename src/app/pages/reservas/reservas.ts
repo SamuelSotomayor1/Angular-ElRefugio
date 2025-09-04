@@ -27,11 +27,17 @@ success: string | null = null;
     });
   }
 
+  toastMessage: string | null = null;
+
+  showToast(message: string) {
+    this.toastMessage = message;
+    setTimeout(() => this.toastMessage = null, 6000); 
+  }
   submit() {
     if (this.form.invalid) {
-      this.error = 'Por favor completa todos los campos.';
-      return;
-    }
+    this.showToast('Por favor completa todos los campos ❌');
+    return;
+  }
 
     const formValue = this.form.value;
 
@@ -47,15 +53,12 @@ success: string | null = null;
 
     this.reservationService.createReservation(payload).subscribe({
       next: () => {
-        this.success = 'Reserva creada con éxito ✅';
-        this.error = null;
-        this.form.reset();
-      },
-      error: (err) => {
-        console.error('Error backend:', err);
-        this.error = 'Error al crear la reserva ❌';
-        this.success = null;
-      }
+      this.showToast('✅ Reserva creada con éxito');
+      this.form.reset();
+    },
+    error: () => {
+      this.showToast('❌ Error al crear la reserva');
+    }
     });
   }
 }
