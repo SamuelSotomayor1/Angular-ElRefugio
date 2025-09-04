@@ -35,7 +35,7 @@ success: string | null = null;
   }
   submit() {
     if (this.form.invalid) {
-    this.showToast('Por favor completa todos los campos ❌');
+    this.showToast('Por favor completa todos los campos');
     return;
   }
 
@@ -53,11 +53,11 @@ success: string | null = null;
 
     this.reservationService.createReservation(payload).subscribe({
       next: () => {
-      this.showToast('✅ Reserva creada con éxito');
-      this.form.reset();
+        this.showToast('Reserva creada con éxito');
+        this.form.reset();
     },
-    error: () => {
-      this.showToast('❌ Error al crear la reserva');
+      error: () => {
+        this.showToast('Error al crear la reserva');
     }
     });
   }
