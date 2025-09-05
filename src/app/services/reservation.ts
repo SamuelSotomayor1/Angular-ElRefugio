@@ -16,7 +16,7 @@ export interface Reservation {
   providedIn: 'root'
 })
 export class ReservationService {
-  private apiUrl = 'http://localhost:3000/api/reservation';
+  private apiUrl = 'https://backend-elrefugio.onrender.com/api/reservation';
 
   constructor(private http: HttpClient) {}
 
