@@ -16,11 +16,13 @@ export interface Reservation {
   providedIn: 'root'
 })
 export class ReservationService {
-  private apiUrl = 'https://backend-elrefugio.onrender.com/api/reservation';
+  // 1. Forzamos a que sea string. Si process.env no existe, usa un string vacío o una URL local.
+  private API_URL: string = process.env['API_URL'] || 'http://localhost:3000/api';
 
   constructor(private http: HttpClient) {}
 
   createReservation(data: Reservation): Observable<any> {
-    return this.http.post<any>(this.apiUrl, data);
+    // Ahora this.API_URL es garantizadamente un string
+    return this.http.post<any>(this.API_URL, data);
   }
 }
