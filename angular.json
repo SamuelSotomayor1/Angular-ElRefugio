@@ -29,6 +29,10 @@
           },
           "configurations": {
             "production": {
+              "prerender": false,
+              "ssr": {
+                "entry": "src/server.ts"
+              },
               "budgets": [
                 {
                   "type": "initial",
